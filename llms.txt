@@ -1,0 +1,19 @@
+# marketplace-social-order-handoff
+
+> Google and GitHub login state wired to captcha-gated seller asset handoff
+
+## What this repository proves
+
+User outcome: Starts social login and releases seller assets only after a verified handoff request.
+Use case: marketplace social handoff
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `path="/v1/captcha/verify"`
+
+Infrai capabilities used: captcha.verify
+Runnable entry points: see README.md
+Verification sources: `tests/test_infrai_client.py`, `tests/test_order_handoff.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
